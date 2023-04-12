@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity(), NoteClickInterface, NoteClickDeleteInt
         setContentView(binding.root)
         binding.notesRV.layoutManager=LinearLayoutManager(this)
 
-        val noteRVAdapter=NoteRVAdapter(this,this,this)
+        val noteRVAdapter=NoteRVAdapter(this,this)
 
         binding.notesRV.adapter=noteRVAdapter
         viewModel=ViewModelProvider(this,ViewModelProvider.AndroidViewModelFactory.getInstance(application)).
